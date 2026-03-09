@@ -1,25 +1,48 @@
 # A/B Testing Data Analysis – Vanguard Client Experience
 
-## 1. Project Overview
+# 1. Project Overview
 
 This project analyzes the results of an A/B test conducted on Vanguard clients to evaluate whether a new digital experience improves user engagement and completion rates compared to the existing interface.
 
 The objective of the analysis is to determine if the new version of the user experience leads to **statistically significant improvements in client behavior**, and to provide **data-driven recommendations** based on the results.
+
+
+## Project Structure
+
+```
+ab-testing-vanguard-digital-journey
+│
+├── data
+│   ├── raw_data.csv
+│   └── cleaned_data.csv
+│
+├── notebooks
+│   └── ab_testing_analysis.ipynb
+│
+├── visuals
+│   ├── conversion_rate.png
+│   └── user_behavior.png
+│
+├── README.md
+└── requirements.txt
+```
 
 ## Table of Contents
 
 1. [Project Overview](#1-project-overview)  
 2. [Business Problem](#2-business-problem)  
 3. [Dataset](#3-dataset)  
-4. [Data Cleaning](#4-data-cleaning)  
-5. [Metrics Definition](#5-metrics-definition)  
-6. [Completion Rate Analysis](#6-completion-rate-analysis)  
-7. [Error Rate Analysis](#7-error-rate-analysis)  
-8. [Time Spent on the Journey](#8-time-spent-on-the-journey)  
-9. [Hypothesis Testing](#9-hypothesis-testing)  
-10. [Key Insights](#key-insights)  
-11. [Business Recommendation](#business-recommendation)  
-12. [Author](#author)
+4. [Data Cleaning](#4-data-cleaning) 
+5. [EDA](#5-EDA) 
+6. [Metrics Definition](#6-metrics-definition)  
+7. [Completion Rate Analysis](#7-completion-rate-analysis)  
+8. [Error Rate Analysis](#8-error-rate-analysis)  
+9. [Time Spent on the Journey](#9-time-spent-on-the-journey)  
+10. [Hypothesis Testing](#10-hypothesis-testing)  
+11. [Key Insights](#11-key-insights)  
+12. [Business Recommendation](#12-business-recommendation)  
+13. [Tools & Technologies](#13-tools-&-technologies)
+14. [Author](#13-author)
 
 
 ---
@@ -39,7 +62,7 @@ In addition, Vanguard aims to assess whether the redesign delivers a minimum imp
 
 ---
 
-# Key Questions
+## Key Questions
 
 The analysis focuses on answering the following questions:
 
@@ -57,7 +80,7 @@ The analysis focuses on answering the following questions:
 
 The dataset contains information about client interactions during the experiment.
 
-### Main Variables
+## Main Variables
 
 | Variable        | Description                              |
 | --------------- | ---------------------------------------- |
@@ -70,7 +93,7 @@ The dataset contains information about client interactions during the experiment
 
 ---
 
-# Project Workflow
+## Project Workflow
 
 The project follows a typical **A/B testing analytical framework**:
 
@@ -94,28 +117,33 @@ Before conducting the analysis, several data preparation steps were performed to
 - Validated that each visit belongs to only one experiment group (Control or Test)
 - Merged the web activity dataset with the experiment assignment and process step datasets
 
-
 ---
 
-# EDA: 
+# 5. EDA
 
-Initial analysis was conducted to understand the dataset and identify behavioral patterns between the control and test groups.
+Initial exploration was conducted to understand the dataset and compare behavioral patterns between the control and test groups.
 
-Key analyses included:
+The following aspects were analyzed:
 
-* Group size comparison
-* Conversion rate comparison
-* Distribution of time spent
-* User behavior patterns
+- Group size comparison
+- Conversion rate comparison
+- Distribution of time spent on the platform
+- User behavior patterns during the experiment
 
-Metrics analyzed:
+Key metrics analyzed:
 
-* Conversion rate by group
-* Average time spent on platform
-* Process completion rate
+- Conversion rate by group
+- Average time spent on the platform
+- Process completion rate
+
+### Key Observations
+
+- The control and test groups have similar sizes, indicating a balanced experiment.
+- The test group shows slightly higher engagement based on time spent.
+- Conversion rates appear different between groups and will be further tested statistically.
 
 ---
-# 5. Metrics Definition
+# 6. Metrics Definition
 
 To evaluate the impact of the redesigned interface, several key performance metrics were defined to measure how users interacted with the process.
 
@@ -145,7 +173,7 @@ This metric helps evaluate the efficiency of the user journey and whether the re
 
 ---
 
-# 6. Completion Rate Analysis
+# 7. Completion Rate Analysis
 
 Completion rate was analyzed to determine whether the redesigned interface improved the likelihood that users complete the process.
 
@@ -162,7 +190,7 @@ Statistical testing was conducted to determine whether this difference is statis
 
 ---
 
-# 7. Error Rate Analysis
+# 8. Error Rate Analysis
 
 In addition to completion rate, error rate was analyzed to evaluate whether the redesigned interface introduced additional friction in the user journey.
 
@@ -181,7 +209,7 @@ Statistical tests were performed to evaluate whether the difference in error rat
 
 ---
 
-# 8. Time Spent on the Journey
+# 9. Time Spent on the Journey
 
 To better understand how the redesigned interface affects user behavior, the total time spent on the process journey was analyzed.
 
@@ -196,7 +224,7 @@ This analysis helps assess whether the new interface makes the process more effi
 Statistical tests were conducted to determine whether the difference in average journey duration between the two groups is statistically significant.
 
 
-# 9. Hypothesis Testing
+# 10. Hypothesis Testing
 
 To determine whether the observed differences between the Control and Test groups are statistically significant, several statistical tests were conducted.
 
@@ -226,7 +254,7 @@ Independent two-sample t-tests were applied to compare the average time spent at
 
 These tests help identify whether the redesigned interface significantly changes how long users spend progressing through the process.
 
-# Key Insights
+# 11. Key Insights
 
 Key findings from the analysis include:
 
@@ -240,7 +268,7 @@ Overall, the redesigned interface improves the likelihood that users complete th
 
 ---
 
-# Business Recommendation
+# 12. Business Recommendation
 
 Based on the results of the A/B test, the redesigned interface demonstrates a meaningful improvement in completion rate and meets the minimum business requirement of a 5 percentage point increase.
 
@@ -261,7 +289,7 @@ Further analysis could provide deeper insights into user behavior, including:
 
 ---
 
-# Tools & Technologies
+# 13. Tools & Technologies
 
 The analysis was conducted using the following tools:
 
@@ -274,46 +302,10 @@ The analysis was conducted using the following tools:
 * Jupyter Notebook
 * Tableau
 
----
-
-# Project Structure
-
-```
-ab-testing-vanguard-digital-journey
-│
-├── data
-│   ├── raw_data.csv
-│   └── cleaned_data.csv
-│
-├── notebooks
-│   └── ab_testing_analysis.ipynb
-│
-├── visuals
-│   ├── conversion_rate.png
-│   └── user_behavior.png
-│
-├── README.md
-└── requirements.txt
-```
 
 ---
 
-# Key Skills Demonstrated
-
-This project highlights the following analytical skills:
-
-* A/B Testing methodology
-* Hypothesis testing
-* Statistical analysis
-* Data cleaning and preprocessing
-* Data visualization
-* Business insight generation
-
----
-
-# Author
-
-# Author
+# 14. Author
 
 This project was completed as part of the Data Analytics Bootcamp at Ironhack.
 
