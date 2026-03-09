@@ -8,10 +8,10 @@ The objective of the analysis is to determine if the new version of the user exp
 
 ## Table of Contents
 
-1. [Project Overview](#project-overview)  
-2. [Business Problem](#business-problem)  
-3. [Dataset](#dataset)  
-4. [Data Cleaning](#data-cleaning)  
+1. [Project Overview](#1-project-overview)  
+2. [Business Problem](#2-business-problem)  
+3. [Dataset](#3-dataset)  
+4. [Data Cleaning](#4-data-cleaning)  
 5. [Metrics Definition](#5-metrics-definition)  
 6. [Completion Rate Analysis](#6-completion-rate-analysis)  
 7. [Error Rate Analysis](#7-error-rate-analysis)  
