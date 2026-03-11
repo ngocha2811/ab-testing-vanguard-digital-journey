@@ -88,6 +88,11 @@ ab-testing-vanguard-digital-journey
 │   ├── ab_testing_analysis.ipynb
 │   └── eda.ipynb
 │
+├── visuals
+│   ├── 01.completion_rate_by_group.png
+│   ├── 02.users_journey_distribution.png
+│   └── 03.error_rate_by_group.png
+│
 ├── README.md
 └── requirements.txt
 ```
@@ -181,6 +186,10 @@ This metric helps evaluate the **efficiency of the user journey** and whether th
 # 9. Completion Rate Analysis
 
 Completion rate was calculated by identifying visits that reached the final step (`confirm`).
+
+![Completion Rate](visuals/01.completion_rate_by_group.png)
+
+The Test group shows a higher completion rate compared to the Control group.
 
 ### Results
 
