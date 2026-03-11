@@ -84,11 +84,9 @@ ab-testing-vanguard-digital-journey
 │   └── cleaned_data.csv
 │
 ├── notebooks
-│   └── ab_testing_analysis.ipynb
-│
-├── visuals
-│   ├── completion_rate.png
-│   └── user_behavior.png
+│   ├── cleaning.ipynb
+│   ├── ab_testing_analysis.ipynb
+│   └── eda.ipynb
 │
 ├── README.md
 └── requirements.txt
@@ -133,7 +131,6 @@ Initial exploration was conducted to understand the dataset and identify behavio
 - group size comparison
 - distribution of user journeys
 - completion rate comparison
-- time spent between process steps
 
 ### Observations
 
@@ -215,9 +212,13 @@ The Test group shows a **higher error rate**, suggesting that some steps in the 
 
 The duration of each journey was calculated by measuring time differences between consecutive process steps within each `visit_id`.
 
-The dataframe was sorted by `visit_id` and `date_time` to reconstruct the correct chronological order of events.
-
 Average time spent navigating between steps was then compared between the Control and Test groups.
+
+
+| Variation | Average Journey Time (seconds) |
+|----------|-------------------------------|
+| Control  | 83.65 |
+| Test     | 84.20 |
 
 ---
 
@@ -296,7 +297,7 @@ The analysis reveals several important findings:
 
 - The redesigned interface significantly increases completion rates.
 - Completion improved from **49.64% to 58.35%**, exceeding the **5% business threshold**.
-- However, the Test group shows a **higher error rate**, suggesting some steps may be less intuitive.
+- However, the Test group doesn't shows a **higher error rate**, suggesting some steps may be less intuitive. that test group doesnt have lower error rate.
 - The redesign does **not significantly change the time spent navigating the process**.
 
 Overall, the new interface improves process completion but may introduce additional navigation friction.
