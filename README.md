@@ -1,5 +1,16 @@
 # A/B Testing Data Analysis – Vanguard Digital Journey
 
+## Executive Summary:
+
+### Objective
+Evaluate whether a redesigned Vanguard digital journey improves completion rate.
+
+### Key Result
+The new interface increased completion rate from 49.8% to 58.5% (+8.7%, statistically significant).
+
+### Business Recommendation
+Deploy the new UI design while addressing increased error rates in early steps.
+
 ## 1. Project Overview
 
 This project analyzes the results of an **A/B test conducted on Vanguard’s digital client experience** to evaluate whether a redesigned interface improves user engagement and process completion compared to the existing interface.
